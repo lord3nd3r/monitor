@@ -154,6 +154,8 @@ Outputs:
 - Top 10 talkers
 - Bottom 10 talkers (lowest message counts)
 
+The top 3 talkers in the “Top 10” line are prefixed with medals (🥇🥈🥉).
+
 ### `.userstats` (channel-only)
 
 Shows stats for a single user in the current channel.

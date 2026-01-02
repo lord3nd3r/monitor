@@ -324,7 +324,12 @@ def channelstats(bot, trigger):
 		bot.say("No stats yet for this channel.")
 		return
 
-	bot.say("Top 10: " + ", ".join([f"{n}({c})" for n, c in top]))
+	medals = ["🥇", "🥈", "🥉"]
+	top_parts = [
+		(f"{medals[i]}{n}({c})" if i < 3 else f"{n}({c})")
+		for i, (n, c) in enumerate(top)
+	]
+	bot.say("Top 10: " + ", ".join(top_parts))
 	bot.say("Bottom 10: " + ", ".join([f"{n}({c})" for n, c in bottom]))
 
 
